@@ -2,7 +2,7 @@ const express=require('express');
 const mongodb=require('mongodb');
 const app=express();
 const http=require('http').createServer(app);
-const url="mongodb+srv://root:root@mevn.owohcup.mongodb.net/?retryWrites=true&w=majority";
+const url="mongodb+srv://root:root@cluster0.vcvx4oj.mongodb.net/?retryWrites=true&w=majority";
 var MongoClient=mongodb.MongoClient;
 var ObId=mongodb.ObjectId;
 const expressFormidable=require("express-formidable");
