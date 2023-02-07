@@ -39,9 +39,9 @@ app.use(express.static(__dirname+'/dist/'));
 app.use(expressFormidable());
 http.listen(process.env.PORT || port,function(){
     
-    app.get('*',async (req,res)=>{
-        res.sendFile(__dirname+"/dist/index.html");
-    })
+//     app.get('*',async (req,res)=>{
+//         res.sendFile(__dirname+"/dist/index.html");
+//     })
     console.log("server started");
    MongoClient.connect(url,function(error,client){
     if(error)
