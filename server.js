@@ -35,14 +35,13 @@ const upload=multer({
 });
 
 var port =3000;
+app.use(express.static(__dirname+'/dist/'));
 app.use(expressFormidable());
 http.listen(port,function(){
-   if(process.env.Node_ENV==="production"){
-    app.use(express.static(__dirname+'/dist/'));
+    
     app.get('*',async (req,res)=>{
         res.sendFile(__dirname+"/dist/index.html");
     })
-   }
     console.log("server started");
    MongoClient.connect(url,function(error,client){
     if(error)
