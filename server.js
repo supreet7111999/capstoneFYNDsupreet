@@ -43,14 +43,14 @@ http.listen(process.env.PORT || port,function(){
         res.sendFile(__dirname+"/dist/index.html");
     })
     console.log("server started");
-//    MongoClient.connect("mongodb+srv://root:<password>@mevn.owohcup.mongodb.net/?retryWrites=true&w=majority",function(error,client){
-//     if(error)
-//     {
-//         console.error(error);
-//         return ;
-//     }
-//     db=client.db("prblmdb");
-//     global.db=db;
+   MongoClient.connect("mongodb+srv://root:<password>@mevn.owohcup.mongodb.net/?retryWrites=true&w=majority",function(error,client){
+    if(error)
+    {
+        console.error(error);
+        return ;
+    }
+    db=client.db("prblmdb");
+    global.db=db;
     console.error("db connected");
     // ,upload.single('')
 
