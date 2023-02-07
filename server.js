@@ -95,6 +95,7 @@ http.listen(process.env.PORT || port,function(){
     });
 
     app.post("/login",async function(req,res){
+        console.log("ghf");
         let username=req.fields.username;
         let pass=req.fields.password;
         let type=req.fields.choice;
