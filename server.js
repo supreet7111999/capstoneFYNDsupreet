@@ -37,7 +37,7 @@ const upload=multer({
 var port =3000;
 app.use(express.static(__dirname+'/dist/'));
 app.use(expressFormidable());
-http.listen(port,function(){
+http.listen(process.env.PORT || port,function(){
     
     app.get('*',async (req,res)=>{
         res.sendFile(__dirname+"/dist/index.html");
